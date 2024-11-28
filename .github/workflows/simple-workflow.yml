@@ -1,9 +1,14 @@
 name: simple-workflow.yml
 
-#on:
-#  schedule:
-#    - cron: "0 * * * *" 
-#jobs:
-#  Run-npm-on-Ubuntu:
-#   name: main_job
-  
+on:
+  workflow_dispatch:
+  #schedule:
+  #  - cron: "0 * * * *" 
+jobs:
+  main_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run
+        run: |
+          echo "Récupération du code source"
+          echo "Vérification terminée"
